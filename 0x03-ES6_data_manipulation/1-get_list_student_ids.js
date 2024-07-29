@@ -1,19 +1,8 @@
-export default function getListStudents() {
-  const obj1 = { 
-    id: 1,
-    firstname: 'Guillaume',
-    location: 'San Francisco'
+export default function getListStudents(arrarg) {
+    if (Array.isArray(arrarg)) {     
+      const idarr = arrarg.map(obj => obj.id);
+      return idarr;
+    } else {
+      return [];
+    }
   }
-  const obj2 = { 
-    id: 2,
-    firstname: 'James',
-    location: 'Columbia'
-  }
-  const obj3 = { 
-    id: 5,
-    firstname: 'Serena',
-    location: 'San Francisco'
-  }
-    
-  return [obj1, obj2, obj3]
-}
